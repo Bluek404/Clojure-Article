@@ -1,42 +1,75 @@
-<html>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <title>Clojure - Functional Programming for the JVM中文版</title> 
+    <title>Clojure - Functional Programming for the JVM 中文版</title>
     <style type="text/css">
-           body {                                                                                                                                                color: rgb(0, 0, 0);                                                                                                                             background-color: rgb(255, 255, 255);                                                                                            
-                font-family: Verdana, sans-serif;                                                                                                
-                margin-left: 0.25in;                                                                                                             
-                margin-right: 0.25in;                                                                                                                        }                                                                                                                                         
-            a:hover {                                                                                                                                            color: rgb(0, 0, 255);                                                                                                                           background-color: rgb(255, 253, 160);                                                                                                        }                                                                                                                                         
-            code {                                                                                                                                               font-family: "Courier New", sans-serif;                                                                                                      }                                                                                                                                         
-            div.center {                                                                                                                                         text-align: center;                                                                                                                          }                                                                                                                                         
-            h1 {                                                                                                                                                 text-align: center;                                                                                                                          }                 
-
-            h2 {                                                                                                                                                 text-align: left;                                                                                                                            }                                                                                                                                         
-            h3 {                                                                                                                                                 text-align: left;                                                                                                                            }                                                                                                                                         
-            hr {                                                                                                                                                 height: 1px;                                                                                                                                     color: rgb(122, 96, 86);                                                                                                                         background-color: transparent;                                                                                                               }                                                                                                                                    
-            p {                                                                                                                                                  text-align: justify;                                                                                                                         }                                                                                                                                         
-            p.author {                                                                                                                                           text-align: center;                                                                                                                          }                                                                                                                                         
-            p.footer {                                                                                                                                           text-align: justify;                                                                                                                         }                                                                                                                                         
-            pre {                                                                                                                                                font-family: "Courier New", sans-serif;                                                                                                      }                                                                                                                                         
-            .educationquicklinks {                                                                                                                               text-align: center;                                                                                                                          }                                                                                                                                         
-            .quicklinks {                                                                                                                                        text-align: right;                                                                                                                           }                                                                                                                                                
-            .red {                                                                                                                                               color: rgb(255, 0, 0);                                                                                                                           background-color: rgb(255, 255, 255);                                                                                                        }                                                                                                                                         
-            .green {                                                                                                                                             color: rgb(0, 128, 0);                                                                                                                           background-color: rgb(255, 255, 255);                                                                                                        }                                                                                                                                         
-            .blue {                                                                                                                                              color: rgb(0, 0, 192);                                                                                                                           background-color: rgb(255, 255, 255);                                                                                                        }                                                      
-            .code {                                                                                                                                              background-color: #FFFFF0;                                                                                                                       border: dashed black 1px;                                                                                                                        padding-left: 10px;                                                                                                                          } 
+      body {
+        background-color: rgb(255, 255, 255);
+        font-family: Verdana, sans-serif;
+        margin-left: 0.25in;
+        margin-right: 0.25in;
+      }
+      a:hover {
+        color: rgb(0, 0, 255);
+        background-color: rgb(255, 253, 160);
+      }
+      code {
+        font-family: "Courier New", monospace;
+      }
+      div.center {
+        text-align: center;
+      }
+      h1 {
+        text-align: center;
+      }
+      h2 {
+        text-align: left;
+      }
+      h3 {
+        text-align: left;
+      }
+      hr {
+        height: 1px;
+        color: rgb(122, 96, 86);
+        background-color: transparent;
+      }
+      p {
+        text-align: justify;
+      }
+      p.author {
+        text-align: center;
+      }
+      p.footer {
+        text-align: justify;
+      }
+      pre {
+        font-family: "Courier New", monospace;
+      }
+      .code {
+        background-color: #FFFFF0;
+        border: dashed black 1px;
+        padding-left: 10px;
+      }
     </style>
   </head>
   <body>
-    <h1>Clojure - Functional Programming for the JVM中文版</h1>
+    <h1>Clojure - Functional Programming for the JVM 中文版</h1>
     <p class="author">
       作者<br />
       <a href="http://www.ociweb.com/mark/" onclick="window.open(this.href,'_blank');return false;" title="Author Bio">R. Mark Volkmann</a>,
       Partner <br />Object Computing, Inc. (OCI)<br />
-      最后更新: 12/4/11 <br/><br/>
+      最后更新: 6/2/13 <br/><br/>
 
       译者<br />
       <a href="http://xumingming.sinaapp.com">徐明明</a>
+    </p>
+
+    <p style="text-align:center">
+      <img src="images/clojure.png" alt="Clojure logo" width="400px"/>
     </p>
     <h2><a name="contents">内容列表</a></h2>
     <table border="1">
@@ -72,7 +105,7 @@
                 <td style="padding:5px;"><a href="#web-application">Web应用</a></td>
             </tr>
             <tr>
-                <td style="padding:5px;"><a href="#bindings">Bindings</a></td>
+                <td style="padding:5px;"><a href="#vars">Vars</a></td>
                 <td style="padding:5px;"><a href="#destructuring">解构</a></td>
                 <td style="padding:5px;"><a href="#databases">数据库</a></td>
             </tr>
@@ -121,13 +154,13 @@
     <em><a href="#contents">回到上面</a></em>
 
 
-    
+
     <h2><a name="functional-programming">函数式编程</a></h2>
 
     <p><a href="http://en.wikipedia.org/wiki/Functional_programming">函数式编程</a>是一种强调函数必须被当成第一等公民对待， 并且这些函数是“纯”的编程方式。这是受<a href="http://en.wikipedia.org/wiki/Lambda_calculus">lambda表达式</a>启发的。纯函数的意思是同一个函数对于同样的参数，它的返回值始终是一样的 -- 而不会因为前一次调用修改了某个全局变量而使得后面的调用和前面调用的结果不一样。这使得这种程序十分容易理解、调试、测试。它们没有副作用 -- 修改某些全局变量， 进行一些IO操作（文件IO和数据库）。状态被维护在方法的参数上面， 而这些参数被存放在栈(stack)上面（通常通过递归调用）， 而不是被维护在全局的堆（heap）上面。这使得方面可以被执行多次而不用担心它会更改什么全局的状态（这是非常重要的特征，等我们讨论事务的时候你就会意识到了）。这也使得高级编译器为了提高代码性能而对代码进行重排(reording)和并行化(parallelizing)成为可能。（并行化代码现在还很少见）</p>
 
     <p>在实际生活中，我们的程序是需要一定的副作用的。Haskel的主力开发<code>Simon Peyton-Jones</code>曾经曰过：</p>
-    <blockquote>“到最后，任何程序都需要修改状态，一个没有副作用的程序对我们来说只是一个黑盒， 你唯一可以感觉到的是：这个黑盒在变热。。”（<a href="http://oscon.blip.tv/file/324976">http://oscon.blip.tv/file/324976</a>）</blockquote>
+    <blockquote>“到最后，任何程序都需要修改状态，一个没有副作用的程序对我们来说只是一个黑盒， 你唯一可以感觉到的是：这个黑盒在变热。。”（<a href="http://www.youtube.com/watch?v=iSmkqocn0oQ&t=3m20s">http://www.youtube.com/watch?v=iSmkqocn0oQ&t=3m20s</a>）</blockquote>
     <p>问题的关键是我们要控制副作用的范围， 清晰地定位它们，避免这种副作用在代码里面到处都是。</p>
 
     <p>把函数当作“第一公民”的语言可以把函数赋值给一个变量，作为参数来调用别的函数， 同时一个函数也可以返回一个函数。可以把函数作为返回值的能力使得我们选择之后程序的行为。接受函数作为参数的函数我们称为“高阶函数”。从某个方面来说，高阶函数的行为是由传进来的函数来配置的，这个函数可以被执行任意次，也可以从不执行。</p>
@@ -135,17 +168,17 @@
     <p>函数式语言里面的数据是不可修改的。这使得多个线程可以在不用锁的情况下并发地访问这个数据。因为数据不会改变，所以根本不需要上锁。随着多核处理器的越发流行，函数式语言对并发语言的简化可能是它最大的优点。如果所有这些听起来对你来说很有吸引力而且你准备来学学函数式语言，那么你要有点心理准备。许多人觉得函数式语言并不比面向对象的语言难，它们只是风格不同罢了。而花些时间学了函数式语言之后可以得到上面说到的那些好处，我想还是值得的。比较流行的函数式语言有:<a href="http://clojure.org/">Clojure</a>, <a href="http://en.wikipedia.org/wiki/Common_Lisp">Common Lisp</a>, <a href="http://erlang.org/">Erlang</a>, <a href="http://research.microsoft.com/en-us/um/cambridge/projects/fsharp/default.aspx">F#</a>, <a href="http://www.haskell.org/">Haskell</a>, <a href="http://en.wikipedia.org/wiki/ML_(programming_language)">ML</a>, <a href="http://caml.inria.fr/ocaml/index.en.html">OCaml</a>, <a href="http://en.wikipedia.org/wiki/Scheme_(programming_language)">Scheme</a>, <a href="http://www.scala-lang.org/">Scala</a>. Clojure和Scala是Java Virtual Machine (JVM)上的语言. 还有一些其它基于JVM的语言: <a href="http://common-lisp.net/project/armedbear/">Armed Bear Common Lisp (ABCL)</a>, <a href="http://ocamljava.x9c.fr/">OCaml-Java</a> and <a href="http://www.gnu.org/software/kawa/">Kawa (Scheme).</a></p>
 
     <em><a href="#contents">回到上面</a></em>
-   
-    
+
+
 
 
     <h2><a name="clojure-overview">Clojure概述</a></h2>
-    
+
     <p>Clojure是一个动态类型的，运行在JVM(JDK5.0以上），并且可以和java代码互操作的函数式语言。这个语言的主要目标之一是使得编写一个有多个线程并发访问数据的程序变得简单。</p>
 
     <p>Clojure的发音和单词closure是一样的。Clojure之父是这样解释Clojure名字来历的:</p>
     <blockquote>“我想把这就几个元素包含在里面： C (C#), L (Lisp) and J (Java). 所以我想到了 Clojure, 而且从这个名字还能想到closure;它的域名又没有被占用;而且对于搜索引擎来说也是个很不错的关键词，所以就有了它了."</blockquote>
-    <p>很快Clojure就会移植到.NET平台上了. ClojureCLR是一个运行在Microsoft的CLR的Clojure实现. 在我写这个入门教程的时候ClojureCLR已经处于alpha阶段了.</p>
+    <p>Clojure同样可以运行在.NET平台上。ClojureCLR是一个运行在Microsoft CLR的Clojure实现，参见<a href="https://github.com/clojure/clojure-clr">https://github.com/clojure/clojure-clr</a>。</p>
 
     <p>在2011年7月, ClojureScript项目开始了，这个项目把Clojure代码编译成Javascript代码：看这里<a href="https://github.com/clojure/clojurescript">https://github.com/clojure/clojurescript</a>.</p>
 
@@ -197,44 +230,39 @@ public void hello(String name) {
 
     <h2><a name="get-started">让我们开始吧</a></h2>
 
-    <p>Clojure是一个相对来说很新的语言。在经过一些年的努力之后，Clojure的第一版是在2007年10月16日发布的。Clojure的主要部分被称为 "Clojure proper" 或者 "core"。你可以从这里下载：<a href="http://clojure.org/downloads">http://clojure.org/downloads</a>. 你也可以使用<a href="http://github.com/technomancy/leiningen/">Leiningen</a>。最新的源代码可以从它的Git库下载.</p>
+    <p>
+      Clojure code for your own library and application projects will
+      typically reside in its own directory (named after the project)
+      and will be managed by the
+      <a href="http://leiningen.org/index.html">Leiningen</a>
+      project management tool. Leiningen (or "lein" for short) will
+      take care of downloading Clojure for you and making it available
+      to your projects. To start using Clojure, you don't need to
+      install Clojure, nor deal with jar files or
+      the <code>java</code> command &mdash; just install and use
+      <code>lein</code> (instructions on the Leiningen homepage,
+      linked to above).
+    </p>
 
-    <p>"<a href="#libraries">Clojure Contrib</a>"是一个大家共享的类库列表。其中有些类库是成熟的，被广泛使用的并且最终可能会被加入Clojure Proper的。但是也有些库不是很成熟，没有被广泛使用，所以也就不会被包含在Conjure Proper里面。所以Clojure Proper里面是鱼龙混杂，使用的时候要自己斟酌，文档在这里：<a href="http://richhickey.github.com/clojure-contrib/index.html">http://richhickey.github.com/clojure-contrib/index.html</a></p>
-
-    <p>对于一个Clojure Contrib， 有三种方法可以得到对应的jar包. 首先你可以下载一个打包好的jar包。其次你可以用maven 来自己打个jar包. Maven可以从这里下载<a href="http://maven.apache.org/">http://maven.apache.org/</a>. 打包命令是 "<code>mvn package</code>". 再其次你可以用ant. ant可以从这里下载<a href="http://ant.apache.org/">http://ant.apache.org/</a>。命令是： "<code>ant -Dclojure.jar={path}</code>".</p>
-
-    <p>要从最小的源代码来编译clojure, 我们假设你已经安装了<a href="http://git-scm.com/">Git</a> 和<a href="http://ant.apache.org/">Ant</a> , 运行下面的命令来下载并且编译打包Clojure Proper和Clojure Contrib:</p>
+    <p>
+      Once you've installed lein, create a trivial project to start
+      playing around with:
+    </p>
 <div class="code">
-<pre>git clone git://github.com/richhickey/clojure.git
-cd clojure
-ant clean jar
-cd ..
-git clone git://github.com/richhickey/clojure-contrib.git
-cd clojure-contrib
-ant -Dclojure.jar=../clojure/clojure.jar clean jar</pre>
+<pre xml:space="preserve">cd ~/temp
+lein new my-proj
+cd my-proj
+lein repl # starts up the interactive REPL
+</pre>
 </div>
-
-    <p>下一步，写一个脚本来运行Read/Eval/Print Loop (REPL) 以及运行 Clojure 程序. 这个脚本通常被命名为"clj". 怎么使用REPL我们等会再介绍. Windows下面，最简单的clj脚本是这样的(UNIX, Linux以及 Mac OS X下面把 %1 改成 $1):</p>
-
-<div class="code">
-<pre>java -jar /path/clojure.jar %1</pre>
-</div>
-
-    <p>这个脚本假定<code>java</code> 在你的<code>PATH</code> 环境变量里面. 为了让这个脚本更加有用:</p>
-    <ul>
-      <li>把经常使用的JAR包比如 "<a href="#libraries">Clojure Contrib</a>" 以及数据库driver添加到classpath里面去(<code>-cp</code>).</li>
-      <li>使clj更好用：用<a href="http://utopia.knoware.nl/~hlub/uck/rlwrap/">rlwrap</a>(利用keystrokes来支持的) 或者<a href="http://jline.sourceforge.net/">JLine</a>来得到命令提示以及命令历史提示。</li>
-      <li>添加一个启动脚本来设置一些特殊变量(比如<code>*print-length*和</code> <code>*print-level*</code>), 加载一些常用的、不再<code>java.lang 里面的包</code> 加载一些常用的不再<code>clojure.core</code>里面的函数并且定义一些常用自定义的函数.</li>
-    </ul>
-    <p>使用这个脚本来启动REPL我们会等会介绍. 用下面这个命令来运行一个clojure脚本（通常以clj为后缀名）:</p>
-
-<div class="code">
-<pre>clj source-file-path</pre>
-</div>
-
-    <p>更多细节看这里<a href="http://clojure.org/getting_started">http://clojure.org/getting_started</a> 以及这里：<a href="http://clojure.org/repl_and_main">http://clojure.org/repl_and_main</a> 同时Stephen Gilardi 还提供了一个脚本：<a href="http://github.com/richhickey/clojure-contrib/raw/master/launchers/bash/clj-env-dir">http://github.com/richhickey/clojure-contrib/raw/master/launchers/bash/clj-env-dir</a>。</p>
-    <p>为了更充分的利用机器的多核，你应该这样来调用： "<code>java -server ...</code>".</p>
-    <p>提供给Clojure的命令行参数被封装在预定义的变量<code>*command-line-args*里面。</code></p>
+    <p>
+      To create a new <i>application</i> project, do
+      "<code>lein new app my-app</code>"
+    </p>
+    <p>
+      For more about getting started, see
+      <a href="http://dev.clojure.org/display/doc/Getting+Started">http://dev.clojure.org/display/doc/Getting+Started</a>.
+    </p>
 
     <em><a href="#contents">回到上面</a></em>
 
@@ -257,7 +285,7 @@ ant -Dclojure.jar=../clojure/clojure.jar clean jar</pre>
         <tr>
           <td>注释</td>
           <td><code>; <em>text</em></code>&nbsp;
-          
+
           <em>单行注释</em></td>
           <td><code>宏(comment <em>text</em>)可以用来写多行注释</code></td>
         </tr>
@@ -323,14 +351,14 @@ ant -Dclojure.jar=../clojure/clojure.jar clean jar</pre>
         </tr>
         <tr>
           <td>给symbol或者集合绑定元数据</td>
-          <td><code>#^{<em>key-value-pairs</em>} <em>object</em></code>
+          <td><code>^{<em>key-value-pairs</em>} <em>object</em></code>
           在读入期处理</td>
           <td><code>(with-meta <em>object</em> <em>metadata-map</em>)</code>
           在运行期处理</td>
         </tr>
         <tr>
           <td>获取symbol或者集合的元数据</td>
-          <td><code>^<em>object</em></code></td>
+          <td></td>
           <td><code>(meta <em>object</em>)</code></td>
         </tr>
         <tr>
@@ -422,7 +450,8 @@ public class PigLatin {
 &nbsp;
 <div class="code">
 <pre>; This is Clojure code.
-; When a set is used as a function, it returns a boolean
+; When a set is used as a function, it returns the argument if it is
+; in the set and nil otherwise.  When used in a boolean context,
 ; that indicates whether the argument is in the set.
 (def vowel? (set "aeiou"))
 
@@ -450,7 +479,7 @@ public class PigLatin {
     <h2><a name="repl">REPL</a></h2>
 
     <p>REPL 是read-eval-print loop的缩写. 这是Lisp的方言提供给用户的一个标准交互方式，如果用过python的人应该用过这个，你输入一个表达式，它立马再给你输出结果，你再输入。。。如此循环。这是一个非常有用的学习语言，测试一些特性的工具。</p>
-    <p>为了启动REPL， 运行我们上面写好的clj脚本。成功的话会显示一个"<code>user=></code>".  "<code>=></code>" 前面的字符串表示当前的默认名字空间。“=>"后面的则是你输入的form以及它的输出结果。 下面是个简单的例子:</p>
+    <p>为了启动REPL，在命令提示符里运行 "<code>lein repl</code>"。成功的话会显示一个"<code>user=></code>".  "<code>=></code>" 前面的字符串表示当前的默认名字空间。“=>"后面的则是你输入的form以及它的输出结果。 下面是个简单的例子:</p>
 
 <div class="code">
 <pre>user=> (def n 2)
@@ -481,59 +510,172 @@ user=> (* n 3)
 
 
 
-    <h2><a name="bindings">Bindings</a></h2>
-
-    <p>Clojure里面是不支持变量的。它跟变量有点像，但是在被赋值之后是不允许改的，包括：全局binding, 线程本地(thread local)binding， 以及函数内的本地binding， 以及一个表达式内部的binding。</p>
-    <p><code>def</code> 这个special form 定义一个全局的 binding，并且你还可以给它一个"root value" ，这个root value在所有的线程里面都是可见的，除非你给它赋了一个线程本地的值.<code>def</code> 也可以用来改变一个已经存在的binding的root value ------ 但是这是不被鼓励的，因为这会牺牲不可变数据所带来的好处。</p>
-    <p>函数的参数是只在这个函数内可见的本地binding。</p>
-    <p><code>let</code> 这个special form 创建局限于一个当前form的bindings. 它的第一个参数是一个vector, 里面包含名字-表达式的对子。表达式的值会被解析然后赋给左边的名字。这些binding可以在这个vector后面的表达式里面使用。这些binding还可以被多次赋值以改变它们的值，let命令剩下的参数是一些利用这个binding来进行计算的一些表达式。注意：如果这些表达式里面有调用别的函数，那么这个函数是无法利用let创建的这个binding的。</p>
-    <p><span style="line-height: 6px;">宏</span> <code>binding</code> 跟<code>let</code>类似, 但是它创建的本地binding会暂时地覆盖已经存在的全局binding. 这个binding可以在创建这个binding的form以及这个form里面调用的函数里面都能看到。但是一旦跳出了这个<code>binding</code> 那么被覆盖的全局binding的值会回复到之前的状态。</p>
-    <p>从 Clojure 1.3开始, binding只能用在动态变量(dynamic var)上面了. 下面的例子演示了怎么定一个dynamic var。另一个区别是<code>let</code> 是串行的赋值的, 所以后面的binding可以用前面binding的值, 而<code>binding</code> 是不行的.</p>
-    <p>要被用来定义成新的、本地线程的、用binding来定义的binding有它们自己的命名方式：她们以星号开始，以星号结束。在这篇文章里面你会看到：<code>*command-line-args*</code>,<code>*agent*</code>,<code>*err*</code>,<code>*flush-on-newline*</code>,<code>*in*</code>,<code>*load-tests*</code>,<code>*ns*</code>,<code>*out*</code>,<code>*print-length*</code>,<code>*print-level*</code> and<code>*stack-trace-depth*</code>.要使用这些binding的函数会被这些binding的值影响的。比如给*out*一个新的binding会改变println函数的输出终端。</p>
-    <p>下面的例子介绍了<code>def</code>,<code>let</code> 和<code>binding</code>的用法。</p>
-
+<h2><a name="vars">Vars</a></h2>
+<p>
+  Clojure provides bindings to Vars, which are containers bound to mutable
+  storage locations. There are global bindings, thread-local bindings,
+  bindings that are local to a function, and bindings that are local to a given form.
+</p>
+</p>
+  Function parameters are bound to Vars that are local to the function.
+</p>
+<p>
+  The <code>def</code> special form binds a value to a symbol. It provides a
+  mechanism to define metadata, <code>:dynamic</code>,  which allows a thread-local value
+  within the scope of a <code>binding</code> call.
+  In other words, it allows re-definition of assigned value per execution thread
+  and scope. If the Var is not re-assigned to a new value in a separate
+  execution thread, the Var refers to the value of the root binding,
+  if accessed from another thread.
+<p>
+  The <code>let</code> special form creates bindings to Vars
+  that are bound to the scope within the statement.
+  Its first argument is a vector containing name/expression pairs.
+  The expressions are evaluated in order and their results
+  are assigned to the names on their left.
+  These Vars can be used in the binding of other Vars declared within the vector.
+  The expressions following the Var declaration vector
+  contain the Var(s) that are executed only within the <code>let</code> scope.
+  Vars within functions that are called within <code>let</code> but
+  defined outside of that scope are not affected
+  by the declarations in the <code>let</code>'s vector.
+   </p>
+<p>
+  <a name="binding">The</a> <code>binding</code> macro
+  is similar to <code>let</code>,
+  but it gives new, thread-local values
+  to existing global bindings throughout the scope's
+  thread of execution.
+  The values of Vars bound within the <code>let</code>
+  vector argument are also used in functions, if they use
+  the same Var names, called from inside that scope.
+  When the execution thread leaves the <code>binding</code> macro's scope,
+  the global Var bindings revert to their previous values.
+  Starting in Clojure 1.3, binding can only do this for vars
+  declared <code>:dynamic</code>.
+</p>
+<p>
+  Vars intended to be bound to new, thread-local values
+  using <code>binding</code> have their own naming convention.
+  These symbols have names that
+  begin and end with an asterisk.
+  Examples that appear in this article include
+  <code>*command-line-args*</code>,
+  <code>*agent*</code>,
+  <code>*err*</code>,
+  <code>*flush-on-newline*</code>,
+  <code>*in*</code>,
+  <code>*load-tests*</code>,
+  <code>*ns*</code>,
+  <code>*out*</code>,
+  <code>*print-length*</code>,
+  <code>*print-level*</code> and
+  <code>*stack-trace-depth*</code>.
+  Functions that use these bindings are affected by their values.
+  For example, binding a new value to <code>*out*</code>
+  changes the output destination of
+  the <code>println</code> function.
+</p>
+<p>
+  The following code demonstrates usage of
+  <code>def</code>, <code>defn</code>, <code>let</code>, <code>binding</code>, and <code>println</code>.
+</p>
 <div class="code">
-<pre>(def ^:dynamic v 1) ; v is a global binding
+<pre xml:space="preserve">
+(def ^:dynamic v 1) ; v is a global binding
 
 (defn f1 []
-  (println "f1: v =" v)) ; global binding
+(println "f1: v:" v))
 
 (defn f2 []
-  (println "f2: before let v =" v) ; global binding
-  (let [v 2] ; creates local binding v that shadows global one
-    (println "f2: in let, v =" v) ; local binding
-    (f1))
-  (println "f2: after let v =" v)) ; global binding
+(println "f2: before let v:" v)
+; creates local binding v that shadows global one
+(let [v 2]
+; local binding only within this let statement
+(println "f2: in let, v:" v)
+(f1))
+; outside of this let, v refers to global binding
+(println "f2: after let v:" v))
 
 (defn f3 []
-  (println "f3: before binding v =" v) ; global binding
-  (binding [v 3] ; same global binding with new, temporary value
-    (println "f3: in binding, v =" v) ; global binding
-    (f1))
-  (println "f3: after binding v =" v)) ; global binding
+(println "f3: before binding v:" v)
+; same global binding with new, temporary value
+(binding [v 3]
+; global binding, new value
+(println "f3: within binding function v: " v)
+(f1)) ; calling f1 with new value to v
+; outside of binding v refers to first global value
+(println "f3: after binding v:" v))
 
 (defn f4 []
- (def v 4)) ; changes the value of the global binding
+(def v 4)) ; changes the value of v in the global scope
 
+(println "(= v 1) => " (= v 1))
+(println "Calling f2: ")
 (f2)
+(println)
+(println "Calling f3: ")
 (f3)
+(println)
+(println "Calling f4: ")
 (f4)
-(println "after calling f4, v =" v)</pre>
+(println "after calling f4, v =" v)
+</pre>
 </div>
-
-    <p>上面代码的输出是这样的：</p>
-
+<p>
+  To run the code above, save it in a file named "vars.clj" and
+  use the shell script for executing Clojure files described earlier
+  as follows:
+</p>
 <div class="code">
-<pre>f2: before let v = 1
-f2: in let, v = 2
-f1: v = 1 (let DID NOT change value of global binding)
-f2: after let v = 1
-f3: before binding v = 1
-f3: in binding, v = 3
-f1: v = 3 (binding DID change value of global binding)
-f3: after binding v = 1 (value of global binding reverted back)
-after calling f4, v = 4</pre>
+<pre xml:space="preserve">
+$ clj vars.clj
+</pre>
 </div>
+<p>
+  The output produced by the code above follows:
+</p>
+<div class="code">
+<pre xml:space="preserve">
+; (= v 1) =>  true
+Calling f2
+f2: before let v: 1
+f2: in let, v: 2
+f1: v: 1
+f2: after let v: 1
+
+Calling f3
+f3: before binding v: 1
+f3: within binding function v:  3
+f1: v: 3
+f3: after binding v: 1
+
+Calling f4
+after calling f4, v: 4
+</pre>
+</div>
+<h4>Recap:</h4>
+</p>
+<p>
+  Notice in the first call to f2, the <code>let</code>
+  function's binding to v did not change its originally
+  declared value, as is shown in the call to
+  f1 within the <code>let</code> statement.
+  The value of v in f1 is 1, not 2.
+</p>
+<p>
+  Next, inside f3 within the scope of the <code>binding</code> call,
+  the value of v was re-assigned within f1 since f1 was called within the
+  execution thread of <code>binding</code> call's scope. Once f3's
+  function execution thread exits from the <code>binding</code> call,
+  v is bound to the initially declared binding, 1.
+</p>
+<p>
+  When f4 is called, the binding of v is not within the context of a
+  new execution thread so v is bound to the new value, 4, in the global scope.
+  Remember that changing a global value is not necessarily a best
+  practice.  It is presented in f4's definition for demonstration purposes.
+</p>
     <em><a href="#contents">回到上面</a></em>
 
 
@@ -625,7 +767,12 @@ after calling f4, v = 4</pre>
 (contains? (set stooges) "Moe") ; -> true</pre>
 </div>
 
-    <p><code>conj</code> 和<code>cons</code> 函数的作用都是通过一个已有的集合来创建一个新的包含更多元素的集合 -- 新加的元素在最前面。<code>remove</code> 函数创建一个只包含所指定的谓词函数测试结果为false的元素的集合:</p>
+    <p>
+      While the <code>conj</code> function will create a new
+      list, the <code>cons</code> function will create a new
+      sequence (more about that in the Sequences chapter). In each
+      case the new item(s) are added to the front.
+      <code>remove</code> 函数创建一个只包含所指定的谓词函数测试结果为false的元素的集合:</p>
 
 <div class="code">
 <pre>(def more-stooges (conj stooges "Shemp")) -> ("Shemp" "Moe" "Larry" "Curly")
@@ -930,7 +1077,10 @@ The flavor of red popsicles is cherry.</pre>
 (filter #(even? %) years) ; short way where % refers to the argument</pre>
 </div>
 
-    <p>通过<code>fn</code> 定义的匿名函数可以包含任意个数的表达式； 而通过<code>#(...)</code>, 定义的匿名函数则只能包含一个表达式，如果你想包含多个表达式，那么把它用<code>do</code>包起来。如果只有一个参数， 那么你可以通过<code>%</code>来引用它； 如果有多个参数， 那么可以通过<code>%1</code>,<code>%2</code> 等等来引用。 看例子:</p>
+    <p>通过<code>fn</code> 定义的匿名函数可以包含任意个数的表达式；
+      It can also have a name (following "fn") which makes it
+      no longer anonymous and enables it to call itself recursively.
+      而通过<code>#(...)</code>, 定义的匿名函数则只能包含一个表达式，如果你想包含多个表达式，那么把它用<code>do</code>包起来。如果只有一个参数， 那么你可以通过<code>%</code>来引用它； 如果有多个参数， 那么可以通过<code>%1</code>,<code>%2</code> 等等来引用。 看例子:</p>
 
 <div class="code">
 <pre>(defn pair-test [test-fn n1 n2]
@@ -996,7 +1146,21 @@ The flavor of red popsicles is cherry.</pre>
 (times2 3 4) ; 2 * 3 * 4 -> 24</pre>
 </div>
 
-    <p>下面是一个使用<code>map</code> 和<code>partial</code> 的有趣的例子.</p>
+    <p>下面是一个使用<code>map</code> 和<code>partial</code> 的有趣的例子.
+      We'll define functions that use the <code>map</code> function
+      to compute the value of an arbitrary polynomial
+      and its derivative for given x values.
+      The polynomials are described by a vector of their coefficients.
+      Next, we'll define functions that use <code>partial</code>
+      to define functions for a specific polynomial and its derivative.
+      Finally, we'll demonstrate using the functions.
+    </p>
+    <p>
+      The <code>range</code> function returns a lazy sequence of integers
+      from an inclusive lower bound to an exclusive upper bound.
+      The lower bound defaults to 0, the step size defaults to 1,
+      and the upper bound defaults to infinity.
+    </p>
 
 <div class="code">
 <pre>(defn- polynomial
@@ -1137,7 +1301,7 @@ Calendar/APRIL ; works if the Calendar class was imported</pre>
 </div>
 
     <p>还一个宏：<code>.?.</code> 在<code>clojure.contrib.core</code> 名字空间里面， 它和上面<code>..</code>这个宏的区别是，在调用的过程中如果有一个返回结果是nil, 它就不再继续调用了，可以防止出现<code>NullPointerException</code>异常。</p>
-    <p><code>doto</code> 函数可以用来调用一个对象上的多个方法。它返回它的第一个参数， 也就是所要调用方法的对象。这对于初始化一个对象的对各属性是非常方便的。 (看下面"<a href="#namespaces">Namespaces</a>"那一节的<code>JFrame</code> GUI 对象的例子). 比如:</p>
+    <p><code>doto</code> 宏可以用来调用一个对象上的多个方法。它返回它的第一个参数， 也就是所要调用方法的对象。这对于初始化一个对象的对各属性是非常方便的。 (看下面"<a href="#namespaces">Namespaces</a>"那一节的<code>JFrame</code> GUI 对象的例子). 比如:</p>
 
 <div class="code">
 <pre>(doto calendar
@@ -1160,7 +1324,7 @@ Calendar/APRIL ; works if the Calendar class was imported</pre>
 
     <h3>Proxies</h3>
 
-    <p><code>proxy</code> 创建一个继承了指定类并且/或者实现了0个或者多个接口的类的对象。这对于创建那种必须要实现某个接口才能得到通知的listener对象很有用。举一个例子， 大家可以看下面 "<a href="#desktop-applications">Desktop Applications</a>" 那一节的例子。那里我们创建了一个继承JFrame类并且实现ActionListener接口的类的对象。</p>
+    <p><code>proxy</code> 宏创建一个继承了指定类并且/或者实现了0个或者多个接口的类的对象。这对于创建那种必须要实现某个接口才能得到通知的listener对象很有用。举一个例子， 大家可以看下面 "<a href="#desktop-applications">Desktop Applications</a>" 那一节的例子。那里我们创建了一个继承JFrame类并且实现ActionListener接口的类的对象。</p>
 
 
     <h3><a name="Threads">Threads</a></h3>
@@ -1477,7 +1641,7 @@ D2</pre>
 
     <h2><a name="sequences">序列</a></h2>
 
-    <p>序列可以看成是集合的一个逻辑视图。许多事物可以看成是序列。包括Java的集合，Clojure提供的集合，字符串，流，目录结构以及XML树。很多Clojure的函数返回一个lazy序列(LazySeq), 这种序列里面的元素不是实际的数据， 而是一些方法， 它们直到用户真正需要数据的时候才会被调用。LazySeq的一个好处是在你创建这个序列的时候你不用太担心这个序列到底会有多少元素。下面是会返回lazySeq的一些函数:<code>cache-seq</code>,<code>concat</code>,<code>cycle</code>,<code>distinct</code>,<code>drop</code>,<code>drop-last</code>,<code>drop-while</code>,<code>filter</code>,<code>for</code>,<code>interleave</code>,<code>interpose</code>,<code>iterate</code>,<code>lazy-cat</code>,<code>lazy-seq</code>,<code>line-seq</code>,<code>map</code>,<code>partition</code>,<code>range</code>,<code>re-seq</code>,<code>remove</code>,<code>repeat</code>,<code>replicate</code>,<code>take</code>,<code>take-nth</code>,<code>take-while</code> and<code>tree-seq</code>。</p>
+    <p>序列可以看成是集合的一个逻辑视图。许多事物可以看成是序列。包括Java的集合，Clojure提供的集合，字符串，流，目录结构以及XML树。很多Clojure的函数返回一个lazy序列(LazySeq), 这种序列里面的元素不是实际的数据， 而是一些方法， 它们直到用户真正需要数据的时候才会被调用。LazySeq的一个好处是在你创建这个序列的时候你不用太担心这个序列到底会有多少元素。下面是会返回lazySeq的一些函数和宏:<code>cache-seq</code>,<code>concat</code>,<code>cycle</code>,<code>distinct</code>,<code>drop</code>,<code>drop-last</code>,<code>drop-while</code>,<code>filter</code>,<code>for</code>,<code>interleave</code>,<code>interpose</code>,<code>iterate</code>,<code>lazy-cat</code>,<code>lazy-seq</code>,<code>line-seq</code>,<code>map</code>,<code>partition</code>,<code>range</code>,<code>re-seq</code>,<code>remove</code>,<code>repeat</code>,<code>replicate</code>,<code>take</code>,<code>take-nth</code>,<code>take-while</code> and<code>tree-seq</code>。</p>
     <p>LazySeq是刚接触Clojure的人比较容易弄不清楚的一个东西。比如你们觉得下面这个代码的输出是什么？</p>
 
 <div class="code">
@@ -1741,7 +1905,7 @@ Output from pr:
 </div>
 
     <p>这个只会加载这个类库。这里面的名字还必须是一个全限定的报名， 包名之间用.分割。注意，clojure里面名字空间和方法名之间的分隔符是/而不是java里面使用的. 。比如：</p>
-    
+
 <div class="code">
 <pre>(clojure.string/join "$" [1 2 3]) ; -> "1$2$3"</pre>
 </div>
@@ -1816,7 +1980,7 @@ Output from pr:
 
 
     <h3>Some Fine Print</h3>
-    
+
     <p><code>Symbol</code> 对象有一个<code>String</code> 类型的名字以及一个<code>String</code> 类型的名字空间名字(叫做<code>ns</code>), 但是没有值。它使用一个字符串的名字空间而不是一个名字空间对象使得它可以指向一个还不存在的名字空间。<code>Var</code> 对象有一个执行<code>Symbol</code> 对象的引用 (叫做<code>sym</code>), 一个指向<code>Namespace</code>对象的引用 (叫做<code>ns</code>) 以及一个<code>Object</code> 类型的对象(也就是它的root value, 叫做<code>root</code>). <code>Namespace</code>对象bjects有一个指向<code>Map</code> 的引用， 这个map维护<code>Symbol</code> 对象和<code>Var</code> 对象的对应关系 (叫做<code>mappings</code>)。同时它还有一个map来维护<code>Symbol</code> 别名和<code>Namespace</code> 对象之间的关系 (叫做<code>namespaces</code>). 下面这个类图显示了Java里面的类和接口在Clojure里面的实现。在Clojure里面 "interning" 这个单词一般指的是添加一个<code>Symbol</code>到<code>Var</code> 的对应关系到一个<code>Namespace</code>里面去。</p>
 
 <img src="http://java.ociweb.com/mark/clojure/images/ClassDiagram.png" alt="class diagram" />
@@ -1840,7 +2004,7 @@ Output from pr:
 (println (== card1 card2)) ; same identity? -> false
 (println (= card1 card2)) ; same value? -> true
 
-(def card2 #^{:bent true} card2) ; adds metadata at read-time
+(def card2 ^{:bent true} card2) ; adds metadata at read-time
 (def card2 (with-meta card2 {:bent true})) ; adds metadata at run-time
 (println (meta card1)) ; -> nil
 (println (meta card2)) ; -> {:bent true}
@@ -1850,7 +2014,7 @@ Output from pr:
     <p>一些元数据是Clojure内部定义的。比如<code>:private</code> 它表示一个Var是否能被包外的函数访问。<code>:doc</code> 是一个 Var 的文档字符串。<code>:test</code> 元数据是一个Boolean值表示这个函数是否是一个测试函数。</p>
     <p><code>:tag</code> 是一个字符串类型的类名或者一个<code>Class</code> 对象，表示一个Var在Java里面对应的类型，或者一个函数的返回值。这些被称为“类型提示” 。提供这些可以提高代码性能。如果你想查看你的clojure代码里面哪里使用反射来决定类型信息 -- 也就是说这里可能会有性能的问题， 那么你可以设置全局变量<code>*warn-on-reflection*</code> 为<code>true</code>。</p>
     <p>一些元数据会由Clojure的编译器自动地绑定到Var对象。<code>:file</code> 是定义这个 Var的文件的名字。<code>:line</code> 是定义这个Var的行数。<code>:name</code> 是一个Var的名字的<code>Symbol</code> 对象。<code>:ns</code> 是一个<code>Namespace</code> 对象描述这个Var所在的名字空间。<code>:macro</code> 是一个标识符标识这个符号是不是一个宏。<code>:arglist</code> 是一个装有一堆vector的一个list， 表示一个函数所接受的所有的参数列表(前面在介绍函数的时候说过一个函数可以接受多个参数列表)。</p>
-    <p>函数以及宏，都是有一个<code>Var</code> 对象来表示的, 它们都有关联的元数据。比如输入这个在REPL里面：<code>(meta (var reverse))</code> 或者<code>^#'reverse</code>。输出结果应该下面这些类似(为了好看我加了换行缩进)</p>
+    <p>函数以及宏，都是有一个<code>Var</code> 对象来表示的, 它们都有关联的元数据。比如输入这个在REPL里面：<code>(meta (var reverse))</code>。输出结果应该下面这些类似(为了好看我加了换行缩进)</p>
 
 <div class="code">
 <pre>{
@@ -1863,7 +2027,7 @@ Output from pr:
 }</pre>
 </div>
 
-    <p>clojure.repl包里面的<code>source</code> 函数， 利用元数据来获取一个指定函数的源代码，比如：</p>
+    <p>clojure.repl包里面的<code>source</code> 宏， 利用元数据来获取一个指定函数的源代码，比如：</p>
 
 <div class="code">
 <pre>(source reverse)</pre>
@@ -1892,7 +2056,7 @@ Output from pr:
 
 <div class="code">
 <pre>((meta (var and)) :macro) ; long way -> true
-(^#'and :macro) ; short way -> true</pre>
+((meta #'and) :macro) ; slightly shorter way -&gt; true
 </div>
 
     <p>让我们通过一些例子来看看如何编写并且使用宏。假设我们代码里面很多地方要对一个数字进行判断，通过判断它是接近0， 是正的， 是负的来执行不同的逻辑；我们又不想这种判断的代码到处重复，那么这种情况下我们就可以使用宏了。我们使用<code>defmacro</code> 宏来定义一个宏。</p>
@@ -2056,45 +2220,45 @@ result is 9.0</pre>
           <th>修改方法</th>
           <td><code>(def <em>name</em> <em>new-value</em>)</code>
         可以赋新的值&nbsp;
-        
+
           <hr />
-        
+
         <code>(alter-var-root
         (var <em>name</em>) <em>update-fn</em> <em>args</em>)</code>
         自动设置新值
-        
+
         <hr />
-        
+
         <code>(set! <em>name</em> <em>new-value</em>) 在一个binding form 里满设置一个新的、线程本地的值</code></td>
         <td><code>(ref-set <em>ref</em> <em>new-value</em>)</code>
         <code><span style="color: #000000; font-size: small;"><span style="line-height: 24px;">必须在</span></span>dosync里面调用</code>&nbsp;
-        
+
         <hr />
-        
+
         <code>(alter <em>ref</em>
         <em>update-fn</em> <em>arguments</em>)</code>
         <code><span style="font-size: small;"><span style="line-height: 24px;">必须在</span></span>dosync里面调用</code>
-        
+
         <hr />
-        
+
         <code>(commute <em>ref</em>
         <em>update-fn</em> <em>arguments</em>)</code>
         必须在<code>dosync 里面调用</code></td>
         <td><code>(reset! <em>atom</em> <em>new-value</em>)</code>&nbsp;
-        
+
         <hr />
-        
+
         <code>(compare-and-set! <em>atom</em> <em>current-value</em> <em>new-value</em>)</code>
-        
+
         <hr />
-        
+
         <code>(swap! <em>atom</em>
         <em>update-fn</em> <em>arguments</em>)</code></td>
         <td><code>(send <em>agent</em>
         <em>update-fn</em> <em>arguments</em>)</code>&nbsp;
-        
+
         <hr />
-        
+
         <code>(send-off <em>agent</em>
         <em>update-fn</em> <em>arguments</em>)</code></td>
         </tr>
@@ -2123,7 +2287,7 @@ result is 9.0</pre>
     <p>关于<a href="#bindings">binding</a> 宏的用法我们前面已经介绍过了. 下面的例子演示把它和<code>set!</code> 一起使用. 用set!来修改一个由binding bind的Var的线程本地的值。</p>
 
 <div class="code">
-<pre>(def v 1)
+<pre>(def ^:dynamic v 1) ; need "dynamic" metadata so v can be changed in a binding
 
 (defn change-it []
   (println "2) v =" v) ; -> 1
@@ -2166,7 +2330,7 @@ result is 9.0</pre>
 </div>
 
     <p><code>dosync </code>宏用来包裹一个事务 -- 从它对应的左括号开始，到它对应的右括号结束。在事务里面我们用<code>ref-set</code> 来改变一个Ref的值并且返回这个值。你不能在事务之外调用这个函数，否则会抛出<code>IllegalStateException</code> 异常。 看例子：</p>
-    
+
 <div class="code">
 <pre>(dosync
   ...
@@ -2368,7 +2532,7 @@ balance for Tami is 200</pre>
     <p>Atoms 提供了一种比使用Refs&amp;STM更简单的更新当个值的方法。它不受事务的影响</p>
     <p>有三个函数可以修改一个Atom的值：<code>reset!</code>,<code>compare-and-set!</code> 和<code>swap!</code>.</p>
     <p><code>reset!</code> 函数接受两个参数：要设值的Atom以及新值。它设置新的值，而不管你旧的值是什么。看例子：</p>
-    
+
 <div class="code">
 <pre>(def my-atom (atom 1))
 (reset! my-atom 2)
@@ -2535,7 +2699,7 @@ balance for Tami is 200</pre>
 <div class="code">
 <pre>(ns <em>namespace</em>
   (:gen-class
-   :methods [#^{:static true} [<em>function-name</em> [<em>param-types</em>] <em>return-type</em>]]))</pre>
+   :methods [^{:static true} [<em>function-name</em> [<em>param-types</em>] <em>return-type</em>]]))</pre>
 </div>
 
     <p>让我们看一个例子：下面是一个名字叫做Demo.clj的文件，它的路径是<code>src/com/ociweb/clj。</code></p>
@@ -2543,7 +2707,7 @@ balance for Tami is 200</pre>
 <div class="code">
 <pre>(ns com.ociweb.clj.Demo
   (:gen-class
-   :methods [#^{:static true} [getMessage [String] String]]))
+   :methods [^{:static true} [getMessage [String] String]]))
 
 # Note the hyphen at the beginning of the function name!
 (defn -getMessage [name]
@@ -2686,9 +2850,21 @@ public class Main {
 
 
     <h2><a name="editor-and-ides">编辑器和IDE</a></h2>
-    
-    <p>Clojure plugins for many editors and IDEs are available. For emacs there is clojure-mode and swank-clojure, both at<a href="https://github.com/technomancy/swank-clojure">https://github.com/technomancy/swank-clojure</a>. swank-clojure uses the Superior Lisp Interaction Mode for Emacs (Slime) described at<a href="http://common-lisp.net/project/slime/">http://common-lisp.net/project/slime/</a>. For Vim there is VimClojure<a href="http://kotka.de/projects/clojure/vimclojure.html">http://kotka.de/projects/clojure/vimclojure.html</a>. For NetBeans there is enclojure at<a href="http://enclojure.org/">http://enclojure.org/</a>. For IDEA there a "La Clojure" at<a href="http://plugins.intellij.net/plugin/?id=4050">http://plugins.intellij.net/plugin/?id=4050</a>. For Eclipse there is Counter Clockwise at<a href="http://dev.clojure.org/display/doc/Getting+Started+with+Eclipse+and+Counterclockwise">http://dev.clojure.org/display/doc/Getting+Started+with+Eclipse+and+Counterclockwise</a>.
-
+    <p>
+      Clojure plugins for many editors and IDEs are available.
+      For emacs there is clojure-mode and swank-clojure, both at
+      <a href="https://github.com/technomancy/swank-clojure">https://github.com/technomancy/swank-clojure</a>.
+      swank-clojure uses the Superior Lisp Interaction Mode for Emacs (Slime)
+      described at <a href="http://common-lisp.net/project/slime/">http://common-lisp.net/project/slime/</a>.
+      For Vim there is VimClojure at
+      <a href="http://www.vim.org/scripts/script.php?script_id=2501">http://www.vim.org/scripts/script.php?script_id=2501</a>.
+      For NetBeans there is enclojure at
+      <a href="http://enclojure.org/">http://enclojure.org/</a>.
+      For IDEA there a "La Clojure" at
+      <a href="http://plugins.intellij.net/plugin/?id=4050">http://plugins.intellij.net/plugin/?id=4050</a>.
+      For Eclipse there is Counter Clockwise at
+      <a href="http://dev.clojure.org/display/doc/Getting+Started+with+Eclipse+and+Counterclockwise">http://dev.clojure.org/display/doc/Getting+Started+with+Eclipse+and+Counterclockwise</a>.
+    </p>
 
 
     <h2><a name="desktop-applications">桌面程序</a></h2>
@@ -2858,7 +3034,7 @@ done</pre>
 
     <h2><a name="libraries">类库</a></h2>
 
-    <p>很多的类库提供了Clojure Proper所没有提供的一些功能， 我们在前面的例子里面已经讨论过一些，下面列举一下没有提到的一些。并且这里有已知的类库的一个列表<a href="http://clojure.org/libraries">http://clojure.org/libraries</a>。</p>
+    <p>很多的类库提供了Clojure Proper以及<a href="http://dev.clojure.org/display/doc/Clojure+Contrib">Clojure Contrib</a>所没有提供的一些功能， 我们在前面的例子里面已经讨论过一些，下面列举一下没有提到的一些。并且这里有已知的类库的一个列表<a href="http://clojure.org/libraries">http://clojure.org/libraries</a>。</p>
 
     <ul>
       <li>clojure.tools.cli - 操作命令行参数并且输出帮助信息</li>
@@ -2898,18 +3074,24 @@ done</pre>
 
     <h2><a name="references">参考文献</a></h2>
     <ul>
-      <li>我的Clojure网站-<a href="http://www.ociweb.com/mark/clojure/">http://www.ociweb.com/mark/clojure/</a></li>
-      <li>我的STM网站-<a href="http://www.ociweb.com/mark/stm/">http://www.ociweb.com/mark/stm/</a></li>
-      <li>Clojure官网 -<a href="http://clojure.org/">http://clojure.org/</a></li>
-      <li>Clojure API -<a href="http://clojure.org/api/">http://clojure.org/api/</a></li>
-      <li>clj-doc -<a href="http://clj-doc.s3.amazonaws.com/tmp/doc-1116/">http://clj-doc.s3.amazonaws.com/tmp/doc-1116/</a></li>
-      <li>Clojure类图 -<a href="http://github.com/Chouser/clojure-classes/tree/master/graph-w-legend.png">http://github.com/Chouser/clojure-classes/tree/master/graph-w-legend.png</a></li>
-      <li>clojure-contrib文档 -<a href="http://code.google.com/p/clojure-contrib/wiki/OverviewOfContrib/">http://code.google.com/p/clojure-contrib/wiki/OverviewOfContrib/</a></li>
-      <li>Wikibooks：Clojure Programming -<a href="http://en.wikibooks.org/wiki/Clojure_Programming/">http://en.wikibooks.org/wiki/Clojure_Programming</a></li>
-      <li>Wikibooks：Learning Clojure -<a href="http://en.wikibooks.org/wiki/Learning_Clojure/">http://en.wikibooks.org/wiki/Learning_Clojure</a></li>
-      <li>Wikibooks：Clojure API Examples -<a href="http://en.wikibooks.org/wiki/Clojure_Programming/Examples/API_Examples/">http://en.wikibooks.org/wiki/Clojure_Programming/Examples/API_Examples</a></li>
-      <li>Project Euler Clojure code -<a href="http://clojure-euler.wikispaces.com/">http://clojure-euler.wikispaces.com/</a></li>
-      <li>Clojure Snake Game -<a href="http://www.ociweb.com/mark/programming/ClojureSnake.html">http://www.ociweb.com/mark/programming/ClojureSnake.html</a></li>
+      <li>我的 Clojure 网站 -
+      <a href="http://www.ociweb.com/mark/clojure/">http://www.ociweb.com/mark/clojure/</a></li>
+      <li>我的 STM 网站 - <a href="http://www.ociweb.com/mark/stm/">http://www.ociweb.com/mark/stm/</a></li>
+      <li>Clojure 官网 - <a href="http://clojure.org/">http://clojure.org/</a></li>
+      <li>Clojure API -
+      <a href="http://clojure.github.com/api-index.html">http://clojure.github.com/api-index.html</a></li>
+      <li>Clojure Documentation - <a href="http://clojure-doc.org/">http://clojure-doc.org/</a></li>
+      <li>ClojureDocs - <a href="http://clojuredocs.org/">http://clojuredocs.org/</a></li>
+      <li>Clojure Atlas -
+      <a href="http://www.clojureatlas.com/">http://www.clojureatlas.com/</a></li>
+      <li>Clojure class diagram -
+      <a href="http://github.com/Chouser/clojure-classes/tree/master/graph-w-legend.png">http://github.com/Chouser/clojure-classes/tree/master/graph-w-legend.png</a></li>
+      <li>Wikibooks Clojure Programming - <a href="http://en.wikibooks.org/wiki/Clojure_Programming">http://en.wikibooks.org/wiki/Clojure_Programming</a></li>
+      <li>Wikibooks Learning Clojure - <a href="http://en.wikibooks.org/wiki/Learning_Clojure">http://en.wikibooks.org/wiki/Learning_Clojure</a></li>
+      <li>Wikibooks Clojure API Examples - <a href="http://en.wikibooks.org/wiki/Clojure_Programming/Examples/API_Examples">http://en.wikibooks.org/wiki/Clojure_Programming/Examples/API_Examples</a></li>
+      <li>Project Euler Clojure code - <a href="http://clojure-euler.wikispaces.com/">http://clojure-euler.wikispaces.com/</a></li>
+      <li>Modular contrib documentation - <a href="http://dev.clojure.org/display/design/Where+Did+Clojure.Contrib+Go">http://dev.clojure.org/display/design/Where+Did+Clojure.Contrib+Go</a></li>
+      <li>Clojure Snake Game - <a href="http://www.ociweb.com/mark/programming/ClojureSnake.html">http://www.ociweb.com/mark/programming/ClojureSnake.html</a></li>
     </ul>
     <em><a href="#contents">回到上面</a></em>
     </body>
